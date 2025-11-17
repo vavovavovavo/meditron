@@ -76,6 +76,21 @@ Meditron — это Telegram-бот, предназначенный для пр�
 - Зависимости:
 
 ---
+## Запуск
+1. Install python and requirements.
+```
+pip install -r requirements.txt
+```
+2. Create DB and Server
+```
+docker-compose up --build
+```
+3. Activate Bot
+```
+python3 src\chatbot\telegram_bot.py
+```
+
+
 
 📈 Статистика
 
