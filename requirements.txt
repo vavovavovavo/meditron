@@ -2,3 +2,4 @@ numpy
 pandas
 flask
 psycopg2-binary
+sklearn

@@ -5,7 +5,7 @@ venv/
 # Файлы кэша Python
 __pycache__/
 *.pyc
-
+*.ipynb
 # Файлы IDE (PyCharm, VSCode)
 .idea/
 .vscode/
