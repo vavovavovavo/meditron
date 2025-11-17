@@ -1,2 +1,17 @@
-*.ipynb
-*.csv
+# Виртуальное окружение
+.venv/
+venv/
+
+# Файлы кэша Python
+__pycache__/
+*.pyc
+
+# Файлы IDE (PyCharm, VSCode)
+.idea/
+.vscode/
+
+# Файл с секретными ключами
+.env# created by virtualenv automatically
+
+#csv
+.csv

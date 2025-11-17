@@ -32,24 +32,17 @@ def generate_correlated_gaussian_vectors(mu, R, path, n_samples=1):
     # Преобразование: X = mu + Z @ L.T
     X = mu + Z @ L.T
 
-    # Приводим к int
-    X = X.astype(int)
+    # Приводим к int и [1;10]
+    X = np.clip(X, 1, 10).astype(int)
 
-    # Создаём DataFrame
     df = pd.DataFrame(X)
-
-    # Путь к файлу
     output_path = os.path.join('data', path)  # директория выше в папку data
 
-    # Создаём папку, если не существует
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    # Проверяем, существует ли файл
     if os.path.exists(output_path):
-        # Если файл существует, дописываем данные без заголовка
         df.to_csv(output_path, mode='a', header=False, index=False)
     else:
-        # Если файл не существует, создаём его с заголовком
         df.to_csv(output_path, mode='w', header=True, index=False)
 
     return X
